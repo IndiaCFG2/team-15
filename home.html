@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar bg-primary">
+      
+       
+        <a class="nav-link " href="#">
+            <img src="data:image/png;base64,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" class="rounded-circle z-depth-0"
+              alt="avatar image" height="50">
+          </a>
+      
+   
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+
+        <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar" >
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" style="color: aliceblue;"  id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+                  aria-expanded="false">Dropdown
+                </a>
+                <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" href="#">Admin Login</a>
+                  <a class="dropdown-item" href="#">make request to NGO</a>
+                 
+                </div>
+              </li>
+          </ul>
+
+
+        </div>
+      </nav>
+
+      <div id="demo" class="carousel slide mt-5" data-ride="carousel">
+
+        
+        <ul class="carousel-indicators">
+          <li data-target="#demo" data-slide-to="0" class="active"></li>
+          <li data-target="#demo" data-slide-to="1"></li>
+          <li data-target="#demo" data-slide-to="2"></li>
+        </ul>
+       
+       
+        <div class="carousel-inner">
+          <div class="carousel-item active" >
+            <img src="https://cache.careers360.mobi/media/presets/860X430/article_images/2020/7/1/Haryana-Board-Announces-Summer-Vacations.jpg" alt="Los Angeles" width="100%" height="500">
+          </div>
+          <div class="carousel-item">
+            <img src="https://images.indianexpress.com/2020/04/west-bengal-1200-1.jpg" alt="Chicago" width="100%" height="500">
+          </div>
+          <div class="carousel-item">
+            <img src="https://m.hindustantimes.com/rf/image_size_1200x900/HT/p2/2020/04/29/Pictures/_73454aac-89ee-11ea-9509-5815dbde8d81.jpg" alt="New York" width="100%" height="500">
+          </div>
+        </div>
+       
+        
+        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#demo" data-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </a>
+      </div>
+
+      
+
+
+      <main id="main">
+        <section id="section-d" class="grid">
+          <div class="box">
+            <h2 class="content-title">Contact Us</h2>
+            <p><b>321 EDUCATION FOUNDATION</b></p>
+            <p>
+             #01, Plot No.29/30,Sector-05,
+             <br>
+             Ghansali,Navi Mumbai 400701
+             <br>
+             Maharashtra,India.
+            </p>
+            <p>contact.us@321-foundation.org</p>
+          </div>
+          <div class="box">
+            <h2 class="content-title">About Our Company</h2>
+            <p>
+                To ensure students continue to learn even when they can't come to school, 
+                teachers need effective resources that can be accessed even with basic devices and data constraints.
+            </p>
+            <br>
+            <p>
+                CAPE brings to you tried and tested lesson-plans, worksheets, videos, and teaching guides to help make this happen.
+                 They are sorted by board, subject, and grade so that everything is in an organized and accessible format.
+                CAPE is here to bring teachers the tools they need to be online teaching superheroes!
+            </p>
+          </div>
+        </section>
+      </main>
+    
+      <footer id="main-footer" class="grid">
+        <div>321 Foundation</div>
+        <div>
+          Program - Cape
+          <a href="#" target="_blank">
+             HOME PAGE
+          </a>
+        </div>
+      </footer>
+     
+            
+      
+</body>
+
+<style>
+    /* Core Styles */
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #333;
+    color: #fff;
+    font-size: 1.1em;
+    line-height: 1.5;
+    text-align: center;
+  }
+
+  
+
+  h2
+   {
+    margin: 0;
+    padding: 1em 0;
+  }
+  
+  p {
+    margin: 0;
+    padding: 1em 0;
+  }
+  
+  /* Section D / Boxes */
+  
+  #section-d .box {
+    padding: 2em;
+    color: #fff;
+  }
+  
+  #section-d .box:first-child {
+    background: #2690d4;
+  }
+  
+  /* Footer */
+  
+  #main-footer {
+    padding: 2em;
+    background: #000;
+    color: #fff;
+    text-align: center;
+  }
+  
+  #main-footer a {
+    color: #2690d4;
+    text-decoration: none;
+  }
+  
+  /* Media Queries */
+  
+  @media (min-width: 700px) {
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr repeat(2, minmax(auto, 25em)) 1fr;
+    }
+
+    .box,
+    #main-footer div {
+      grid-column: span 2;
+    }
+
+  
+  }
+  
+</style>
+</html>
