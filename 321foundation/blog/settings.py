@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'urlgen',
     'main',
     'admins',
+    'chartjs',
     ]
 
 MIDDLEWARE = [
