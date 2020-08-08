@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	{% block content %}
+</h1>Create Your Account</h1>
+	<form action="" method="POST">{% csrf_token %}
+
+    	{{ form.as_p }}
+    	<div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="Email" aria-describedby="emailHelp">
+    <small id="Email" class="form-text text-muted"></small>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail1">PhoneNumber</label>
+    <input type="text" class="form-control" id="Phone" aria-describedby="emailHelp">
+    <small id="Phone" class="form-text text-muted"></small>
+  </div>
+		<button type="">Register</button>
+		
+	</form>
+	{% endblock %}
+		
+
+</body>
+</html>
