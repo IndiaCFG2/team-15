@@ -50,6 +50,13 @@
           <a href="#section-b" class="btn">
             About Cape
           </a>
+          {% if user.is_authenticated %}
+ <a href="/main/req" class="btn">
+           Request URL
+          </a>  {% else %}
+    <p>Please Create account or login </p>
+    {% endif %}
+
         </div>
       </header>
     

@@ -16,13 +16,15 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,include
 from django.conf import settings
-from .views import home_view
+from .views import home_view,req_view
 #from main import urls
 
 
 urlpatterns = [
 
     path('home/', home_view),
+       path('req/', req_view),
+  
   
     #path('main/', include('main.urls')),
 ]
