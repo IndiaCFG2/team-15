@@ -1,17 +1,23 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+<html>
+    <head>
+      
+        <title>Dashboard</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" type="text/css" href="dashboard.css">
+    </head>
+    <body>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="#">321 Foundation</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
+          <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="/home/">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="/main/home">Home <span class="sr-only">(current)</span></a>
       </li>
-      <!-- <li class="nav-item">
-       <a class="nav-link" href="main/tasks/">Tasks</a>
-      </li>-->
+     
       <li class="nav-item">
         <a class="nav-link" href="/accounts/login/">Login</a>
       </li>
@@ -25,9 +31,333 @@
         <a class="nav-link" href="{% url 'urlentry' %}">Url Genrator</a>
       </li>
     </ul>
-    <form class="form-inline my-2 my-lg-0" method='GET'   action ='/search/'>
-      <input class="form-control mr-sm-2" type="search" name = "q" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0"  type="submit">Search</button>
-    </form>
-  </div>
-</nav>
+  </nav>
+      <header id="showcase" class="grid">
+        <div class="bg-image"></div>
+        <div class="content-wrap">
+          <h1>Welcome to 321 Foundation</h1>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci
+            eum error earum soluta voluptatum nisi laboriosam eos saepe
+            asperiores dolorum.
+          </p>
+          <a href="#section-b" class="btn">
+            About Cape
+          </a>
+        </div>
+      </header>
+    
+      <main id="main">
+        <section id="section-a" class="grid">
+          <div class="content-wrap">
+            <h2 class="content-title">Cape Vision</h2>
+            <div class="content-text">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
+                sint eligendi possimus? Unde officiis magnam laborum ipsa
+                distinctio odio, vero dolores dicta aliquam aperiam repellendus.
+                Perferendis officiis deserunt velit voluptas nobis sequi animi
+                totam, accusantium, ex eius quia, natus quo?
+              </p>
+            </div>
+          </div>
+        </section>
+        <section id="section-b" class="grid">
+          <ul>
+            <li>
+              <div class="card">
+                <img
+                  src="https://cache.careers360.mobi/media/presets/860X430/article_images/2020/7/1/Haryana-Board-Announces-Summer-Vacations.jpg"
+                  alt=""
+                />
+                <div class="card-content">
+                  <h3 class="card-title">Providing Courses</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Nostrum culpa neque quo eum et quasi velit voluptatum cum
+                    maiores exercitationem.
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="card">
+                <img
+                  src="https://images.indianexpress.com/2020/04/west-bengal-1200-1.jpg"
+                  alt=""
+                />
+                <div class="card-content">
+                  <h3 class="card-title">Various Boards</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Nostrum culpa neque quo eum et quasi velit voluptatum cum
+                    maiores exercitationem.
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="card">
+                <img
+                  src="https://m.hindustantimes.com/rf/image_size_1200x900/HT/p2/2020/04/29/Pictures/_73454aac-89ee-11ea-9509-5815dbde8d81.jpg"
+                  alt=""
+                />
+                <div class="card-content">
+                  <h3 class="card-title">Schools and Grades</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Nostrum culpa neque quo eum et quasi velit voluptatum cum
+                    maiores exercitationem.
+                  </p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </section>
+        <section id="section-c" class="grid">
+          <div class="content-wrap">
+            <h2 class="content-title">We handle all of your digital needs</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime
+              nam rerum vel earum error fugiat cupiditate, dolore eius! Minus,
+              explicabo.
+            </p>
+          </div>
+        </section>
+        <section id="section-d" class="grid">
+          <div class="box">
+            <h2 class="content-title">Contact Us</h2>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum,
+              suscipit. Rerum ducimus a quod, ut et voluptas obcaecati unde
+              fuga.
+            </p>
+            <p>contact@acmewebsolutions.test</p>
+          </div>
+          <div class="box">
+            <h2 class="content-title">About Our Company</h2>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Distinctio earum porro deserunt, deleniti, quae facere
+              repudiandae, officiis est exercitationem nobis iusto doloremque!
+              Soluta excepturi in aut suscipit amet temporibus quo?
+            </p>
+          </div>
+        </section>
+      </main>
+    
+      <footer id="main-footer" class="grid">
+        <div>Cape- 321 Foundation</div>
+        <div>
+          Program Cape
+          <a href="#" target="_blank">
+            Home Page
+          </a>
+        </div>
+      </footer>
+      <style>
+        /* Core Styles */
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #333;
+    color: #fff;
+    font-size: 1.1em;
+    line-height: 1.5;
+    text-align: center;
+  }
+  
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  
+  h1,
+  h2,
+  h3 {
+    margin: 0;
+    padding: 1em 0;
+  }
+  
+  p {
+    margin: 0;
+    padding: 1em 0;
+  }
+  
+  .btn {
+    display: inline-block;
+    background: #333;
+    color: #fff;
+    text-decoration: none;
+    padding: 1em 2em;
+    border: 1px solid #666;
+    margin: 0.5em 0;
+  }
+  
+  .btn:hover {
+    background: #eaeaea;
+    color: #333;
+  }
+  
+  /* Header Showcase */
+  
+  #showcase {
+    min-height: 450px;
+    color: #fff;
+    text-align: center;
+  }
+  
+  #showcase .bg-image {
+    position: absolute;
+    background: #333
+      url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.thepragmaticparent.com%2Fwp-content%2Fuploads%2Foutdoor-learning-at-school.jpg&f=1&nofb=1");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 450px;
+    z-index: -1;
+    opacity: 0.4;
+  }
+  
+  #showcase h1 {
+    padding-top: 100px;
+    padding-bottom: 0;
+  }
+  
+  #showcase .content-wrap,
+  #section-a .content-wrap {
+    padding: 0 1.5em;
+  }
+  
+  /* Section A */
+  
+  #section-a {
+    background: #eaeaea;
+    color: #333;
+    padding-bottom: 2em;
+  }
+  
+  /* Section B */
+  
+  #section-b {
+    padding: 2em 1em 1em;
+  }
+  
+  #section-b ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  #section-b li {
+    margin-bottom: 1em;
+    background: #fff;
+    color: #333;
+  }
+  
+  .card-content {
+    padding: 1.5em;
+  }
+  
+  /* Section C */
+  
+  #section-c {
+    background: #fff;
+    color: #333;
+    padding: 2em;
+  }
+  
+  /* Section D / Boxes */
+  
+  #section-d .box {
+    padding: 2em;
+    color: #fff;
+  }
+  
+  #section-d .box:first-child {
+    background: #2690d4;
+  }
+  
+  /* Footer */
+  
+  #main-footer {
+    padding: 2em;
+    background: #000;
+    color: #fff;
+    text-align: center;
+  }
+  
+  #main-footer a {
+    color: #2690d4;
+    text-decoration: none;
+  }
+  ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+  
+  /* Media Queries */
+  
+  @media (min-width: 700px) {
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr repeat(2, minmax(auto, 25em)) 1fr;
+    }
+  
+    #section-a .content-text {
+      columns: 2;
+      column-gap: 2em;
+    }
+  
+    #section-a .content-text p {
+      padding-top: 0;
+    }
+  
+    .content-wrap,
+    #section-b ul {
+      grid-column: 2/4;
+    }
+  
+    .box,
+    #main-footer div {
+      grid-column: span 2;
+    }
+  
+    #section-b ul {
+      display: flex;
+      justify-content: space-around;
+    }
+  
+    #section-b li {
+      width: 31%;
+    }
+  }
+  
+      </style>
+    </body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
