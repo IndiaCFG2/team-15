@@ -19,14 +19,13 @@ from django.conf import settings
 #from main import urls
 #from main.views import home_view
 
-
 urlpatterns = [
 
     path('admin/', admin.site.urls),
-    #path('home/',home_view),
-     path('accounts/', include('accounts.urls')),
-     path('main/', include('main.urls')),
+    path('urlmagic/',include('urlgen.urls')),   
+    path('accounts/', include('accounts.urls')),
+    path('main/', include('main.urls')),
     path('admins/', include('admins.urls')),
-    #path('main/', include('main.urls')),
+ 
 ]
 
