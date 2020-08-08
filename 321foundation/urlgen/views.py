@@ -36,6 +36,7 @@ def result(request):
     modified = "http://localhost:8000/urlmagic/sharepoint/"+lesson+'/'+ url
     today = date.today()
 
+
     checkobj=UrlData.objects.filter(urlgenerated=modified).filter(dateofhits=today).count()
 
     if not checkobj:
