@@ -3,9 +3,10 @@ from django.http import HttpResponse
 from django.contrib.auth.models import User
 from urlgen.models import UrlData
 from datetime import date
+import datetime
 from django.views.generic import TemplateView
 from chartjs.views.lines import BaseLineChartView
-#from .views import line_chart, line_chart_json
+
 
 
 class LineChartJSONView(BaseLineChartView):
@@ -30,12 +31,12 @@ line_chart_json = LineChartJSONView.as_view()
 
 # Create your views here.
 
-# view for rendering the url generator logic
+# view for rendering the url generator logic 1
 def makeurl(request):
     return render(request,'urlpage.html')
 
 
-# view for render
+# view for render  2
 def sharepoint(request,st,lesson):
     lesson = lesson
 
@@ -47,6 +48,8 @@ def sharepoint(request,st,lesson):
     st = st.replace('`','/')
     return render(request,'urlsharepoint.html',context={"result":st,"lesson":lesson})
 
+
+# render the modified url for the teacher to be shared with student using Whatsapp API
 def result(request):
 
     if not request.user.is_authenticated:
@@ -73,6 +76,35 @@ def result(request):
     # # TODO: this website-domain should be replaced and
 
     return render(request,'urlresult.html',context={"result":modified})
+
+def rangechart(request):    
+    return render(request,'rangechart.html')
+
+def rangechartdata(request):
+
+    startdate = str(request.GET['startdate'])
+    enddate = str(request.GET['enddate'])
+
+    sty=int(startdate[0:4])
+    std=int(startdate[5:7])
+    stm=int(startdate[8:])
+    ety=int(enddate[0:4])
+    etd=int(enddate[5:7])
+    etm=int(enddate[8:])
+
+    startdate = datetime.date(sty,std,stm)
+    enddate = datetime.date(ety,etd,etm)
+
+    a = UrlData.objects.filter(dateofhits__range=(startdate, enddate))
+
+    context = {
+        'startdate' : startdate,
+        'enddate' : enddate,
+        'data':a
+    }
+
+
+    return render(request,'rangechartdata.html',context=context)
 
 
 
