@@ -8,6 +8,27 @@ from django.views.generic import TemplateView
 from chartjs.views.lines import BaseLineChartView
 
 
+mockdata = {
+  "users": [
+    {
+      "lesson": "loyola",
+      "url": "https://www.webforefront.com/django/namedjangourls.html",
+      "modified":"to be generated"
+    },
+    {
+      "lesson": "snhhs",
+      "url": "https://www.webforefront.com",
+      "modified":"to be generated"
+    },
+        {
+      "lesson": "sfrdd",
+      "url": "https://www.webforddeefront.com",
+      "modified":"to be generated"
+    },
+    
+  ]
+}
+
 
 class LineChartJSONView(BaseLineChartView):
     def get_labels(self):
@@ -105,6 +126,33 @@ def rangechartdata(request):
 
 
     return render(request,'rangechartdata.html',context=context)
+
+def dburls(request):
+
+    if not request.user.is_authenticated:
+        username = 'demo'
+    else:
+        username=request.user.username
+    data = mockdata['users']
+    for i in range(len(data)):
+        url = data[i]['url']
+        lesson = data[i]['lesson']
+        url = url.replace('/','`')
+        today = date.today()
+        data[i]['modified'] = "http://localhost:8000/urlmagic/sharepoint/"+lesson+'/'+ url
+        checkobj=UrlData.objects.filter(urlgenerated=data[i]['modified']).filter(dateofhits=today).count()
+
+        if not checkobj:
+            obj = UrlData(school=username,lesson=lesson,urlgenerated=data[i]['modified'],dateofhits=today)
+            obj.save() 
+    context ={
+        'data':data
+    } 
+    
+
+
+    return render(request,'urlgenfromdb.html',context=context)
+
 
 
 
