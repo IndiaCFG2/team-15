@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.contrib.auth.models import User
+from urlgen.models import UrlData
 # Create your views here.
 
 
@@ -12,20 +13,37 @@ def makeurl(request):
 # view for render
 def sharepoint(request,st,lesson):
     lesson = lesson
+
+    obj=UrlData.objects.get(lesson=lesson)
+    obj.hitcount+=1
+
+    # hit counter logic
+    obj.save()   
     st = st.replace('`','/')
     return render(request,'urlsharepoint.html',context={"result":st,"lesson":lesson})
 
 def result(request):
 
-    if request.user.is_authenticated:
-        username = request.user.username    
+    if not request.user.is_authenticated:
+        username = 'demo'    
+    else:
+        username=request.user.username   
 
+    
     url = request.GET['url']
     lesson = request.GET['lesson']
-
     url = url.replace('/','`')
-
     modified = "http://localhost:8000/urlmagic/sharepoint/"+lesson+'/'+ url
+
+
+    checkobj=UrlData.objects.filter(urlgenerated=modified).count()
+
+    if not checkobj:        
+        obj = UrlData(school=username,lesson=lesson,urlgenerated='modified')
+        obj.save()
+
+    # checking for already object else push to the data base
+
 
     # # TODO: this website-domain should be replaced and
 
