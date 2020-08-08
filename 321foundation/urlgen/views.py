@@ -33,7 +33,7 @@ line_chart_json = LineChartJSONView.as_view()
 
 # view for rendering the url generator logic 1
 def makeurl(request):
-    return render(request,'urlpage.html')
+    return render(request,'urlgenerator.html')
 
 
 # view for render  2
