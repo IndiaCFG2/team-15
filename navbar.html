@@ -44,13 +44,11 @@
             <li class="nav-item">
               <a class="nav-link" style="color: aliceblue;" href="/accounts/logout/">Logout</a>
             </li>
-            {%if not request.user.is_authenticated:
-                username="demo"
-            else:
+            {% if request.user.is_authenticated %} 
                 <li class="nav-item">
-                    <a class="nav-link" style="color: aliceblue;" href="{% url 'urlentry' %}">Url Genrator</a>
+                    <a class="nav-link" style="color: aliceblue;" href="{% url 'urlgen' %}">Url Genrator</a>
                 </li>
-            %}
+            {% endif %}
           </ul>
         </nav>
 </body>
