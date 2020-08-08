@@ -1,0 +1,14 @@
+{% extends "registration/register.html" %}
+{% block content%}
+<form action='' method="POST">{% csrf_token %}
+		{{ form.as_p }}
+		<label for="cars">Login as:</label>
+<select id="who" name="who">
+  <option value="user">User</option>
+  <option value="admin">Admin</option>
+</select>
+<br/>
+		<button type="">Login</button>
+		
+	</form>
+{% endblock %}
