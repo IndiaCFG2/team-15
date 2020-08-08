@@ -4,7 +4,6 @@ from django.contrib.auth.models import User
 from urlgen.models import UrlData
 # Create your views here.
 
-
 # view for rendering the url generator logic
 def makeurl(request):
     return render(request,'urlpage.html')
@@ -39,7 +38,7 @@ def result(request):
     checkobj=UrlData.objects.filter(urlgenerated=modified).count()
 
     if not checkobj:        
-        obj = UrlData(school=username,lesson=lesson,urlgenerated='modified')
+        obj = UrlData(school=username,lesson=lesson,urlgenerated=modified)
         obj.save()
 
     # checking for already object else push to the data base
