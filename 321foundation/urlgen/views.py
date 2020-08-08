@@ -17,7 +17,7 @@ def sharepoint(request,st,lesson):
 
 def result(request):
 
-    if request.user.is_authenticated():
+    if request.user.is_authenticated:
         username = request.user.username    
 
     url = request.GET['url']
