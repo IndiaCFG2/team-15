@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'accounts',
     'main',
     'admins',
+    'dashboard.apps.DashboardConfig',
+    'urlHits.apps.MainConfig',
 ]
 
 MIDDLEWARE = [
