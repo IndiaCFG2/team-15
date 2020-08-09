@@ -12,13 +12,13 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 
 <!-- Latest compiled JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>  
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 
 <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-  
+
 </head>
 <body>
-   
+
     <div class="container">
         <div class="d-flex justify-content-center h-100">
             <div class="card">
@@ -27,40 +27,26 @@
                     <div class="d-flex justify-content-center social_icon">
                         <span><i class="fab fa fa-link"></i></span>
                     </div>
-                    
+
                 </div>
-                <div class="card-body">
-                    <!-- <form>                    
+                <div class="card-body nonblur">
 
-
-                        <div class="input-group form-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text"><i class="fas fa-link"></i></span>
-                            </div>
-                            <input type="text" class="form-control">
-                            
-                        </div>                        
-                       
-                        <div class="form-group">
-                            <input type="submit" value="generate" class="btn justify-content-center login_btn">
-                        </div>
-                    </form> -->
                     <form action="{% url 'urlresult' %}">
-                        <br>
-                        Name of lesson:<br>
+                        <p style="color:white;">Name of lesson:</p>
                         <input style="width:60%" type="text" name="lesson" id="lesson"><br>
-            
-                        URL HERE : <br>
+                        <br>
+
+                        <p style="color:white;">URL</p>
                         <input style="width:60%" type="text" name="url" id="url"><br>
                         <br>
                         <input type="submit" class="btn btn-primary">
                     </form>
-                   
+
                 </div>
             </div>
         </div>
     </div>
-    
+
 <style>
     @import url('https://fonts.googleapis.com/css?family=Numans');
 
@@ -70,6 +56,10 @@ background-size: cover;
 background-repeat: no-repeat;
 height: 100%;
 font-family: 'Numans', sans-serif;
+}
+
+.nonblur{
+  opacity: 1
 }
 
 .social_icon span{
@@ -95,7 +85,7 @@ align-content: center;
 }
 
 .card{
-height: 300px;
+height: 330px;
 margin-top: auto;
 margin-bottom: auto;
 width: 400px;

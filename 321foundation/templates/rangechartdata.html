@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 <style>
-
-	body{
+	body {
 		background-color: #638CB8;
 	}
 
-	input{
+	input {
 		width: 100%;
 		padding: 12px 20px;
 		margin: 8px 0;
@@ -14,65 +14,76 @@
 	}
 
 	input::placeholder {
-	  color: #d3d3d3;
+		color: #d3d3d3;
 	}
 
-	.submit{
+	.submit {
 		background-color: #6BA3E8;
 	}
 
-	.center-column{
-		width:600px;
+	.center-column {
+		width: 600px;
 		margin: 20px auto;
-		padding:20px;
+		padding: 20px;
 		background-color: #fff;
 		border-radius: 3px;
-		box-shadow: 6px 2px 30px 0px rgba(0,0,0,0.75);
+		box-shadow: 6px 2px 30px 0px rgba(0, 0, 0, 0.75);
 	}
 
-	.item-row{
+	.item-row {
 
-		margin: 10px;
-		padding: 20px;
+		margin: 6px;
+		padding: 12px;
 		border-radius: 3px;
 		color: #fff;
 		font-size: 16px;
-		box-shadow: 0px -1px 10px -4px rgba(0,0,0,0.75);
+		box-shadow: 0px -1px 10px -4px rgba(0, 0, 0, 0.75);
 	}
 
-	.btn-danger{
+	.btn-danger {
 		background-color: #ffae19;
 		border-color: #e59400;
 	}
-
 </style>
 
 
 
 <div class="container">
-    <h1> <b>Course links</b> </h1>
-   {{startdate}} to {{enddate}}
+	<h1> <b>Course links</b> </h1>
+	{{startdate}} to {{enddate}}
 
 </div>
 
 
 <html>
-    <head>
 
-        <title>Home</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<head>
+
+	<title>Home</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+		integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
 
-    </head>
-    <body>
+</head>
 
-{% for i in data %}
-		<div class="item-row container" style="align-content: center;">
-						<p style="color: black">{{i.school}}</p>
-            <p style="color: black;">{{i.lesson}}</p>
-						<p style="color:black">TotalHits : {{i.hitcount}}</p>
+<body>
+
+
+
+	<div class="container">
+
+			<div class="item-row row container" style="align-content: center;">
+				<p style="color: black">School Name  &nbsp;&nbsp;&nbsp;&nbsp;</p>
+				<p class="column" style="color: black;"> Lesson Name &nbsp;&nbsp;&nbsp;&nbsp;</p>
+				<p class="column" style="color:black">TotalHits &nbsp;&nbsp;&nbsp;&nbsp;</p>
+			</div>
+
+		{% for i in data %}
+		<div class="item-row row container" style="align-content: center;">
+			<p style="color: black">{{i.school}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+			<p class="column" style="color: black;">{{i.lesson}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+			<p class="column" style="color:black">{{i.hitcount}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
 		</div>
-
-
-	{% endfor %}
+		{% endfor %}
+	</div>
