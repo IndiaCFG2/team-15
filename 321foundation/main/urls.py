@@ -22,10 +22,9 @@ from .views import home_view,req_view
 
 urlpatterns = [
 
-    path('', home_view,name="home"),
+    path('home/', home_view,name="home"),
        path('req/', req_view),
-  
-  
+
+
     #path('main/', include('main.urls')),
 ]
-

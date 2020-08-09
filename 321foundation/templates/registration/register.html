@@ -1,39 +1,3 @@
-<!--<!DOCTYPE html>
-<html>
-<head>
-  <title></title>
-</head>
-<body>
-  {% block content %}
-</h1>Create Your Account</h1>
-  <form action="" method="POST">{% csrf_token %}
-
-      {{ form.as_p }}
-      <div class="form-group">
-    <label for="exampleInputEmail1">Email address</label>
-    <input type="email" class="form-control" id="Email" aria-describedby="emailHelp">
-  
-  </div>
-  <div class="form-group">
-    
-    <input type="text" class="form-control" id="Board" >
-   
-  </div>
-  <div class="form-group">
-    <label for="exampleInputEmail1">PhoneNumber</label>
-    <input type="text" class="form-control" id="Phone" >
-   
-  </div>
-    <button type="">Register</button>
-    
-  </form>
-  {% endblock %}
-    
-
-</body>
-</html>
-
--->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -49,13 +13,13 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 
 <!-- Latest compiled JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>  
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 
 <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-  
+
 </head>
 <body>
-   
+
     <div class="container">
         <div class="d-flex justify-content-center h-100">
             <div class="card">
@@ -64,7 +28,7 @@
                     <div class="d-flex justify-content-center social_icon">
                         <span><i class="fab fa fa-user-circle"></i></span>
                     </div>
-                    
+
                 </div>
                 <div class="card-body">
                     <form action="" method="POST">{% csrf_token %}
@@ -74,19 +38,27 @@
       <div class="form-group">
     <label for="exampleInputEmail1">Email address</label>
     <input type="email" class="form-control" id="Email" aria-describedby="emailHelp">
-  
+
   </div>
-  
-  
+  <div class="form-group">
+
+    <input type="text" class="form-control" id="Board" >
+
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail1">PhoneNumber</label>
+    <input type="text" class="form-control" id="Phone" >
+
+  </div>
     <button type="">Register</button>
-    
+
   </form>
-                   
+
                 </div>
             </div>
         </div>
     </div>
-    
+
 <style>
     @import url('https://fonts.googleapis.com/css?family=Numans');
 

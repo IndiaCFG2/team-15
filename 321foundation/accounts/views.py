@@ -43,7 +43,7 @@ def loginview(request):
 		   else:
 			   login(request,user)
 			   messages.success(request, f"New account created")
-			   return redirect('../../')
+			   return redirect('../../main/home')
 	else:
 	    return render(request,"registration/login.html",{'form' : AuthenticationForm()})
 
@@ -51,4 +51,4 @@ def loginview(request):
 def logoutview(request):
     logout(request)
     messages.info(request, "Logged out successfully!")
-    return redirect("../../")
+    return redirect("../../main/home")
