@@ -1,13 +1,13 @@
 <html>
     <head>
-      
+
         <title>Dashboard</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="stylesheet" type="text/css" href="dashboard.css">
     </head>
     <body>
-     
-     
+
+
       <header id="showcase" class="grid">
         <div class="bg-image"></div>
         <div class="content-wrap">
@@ -22,16 +22,52 @@
           </a>
         </div>
       </header>
-    
+
       <main id="main">
+        <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+            <a class="nav-link " href="#">
+                <img src="data:image/png;base64,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" class="rounded-circle z-depth-0"
+                  alt="avatar image" height="50">
+                  </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+                    <ul class="navbar-nav mr-auto">
+                <li class="nav-item active" >
+                  <a class="nav-link" style="color: aliceblue;" href="/main/home">Home <span class="sr-only">(current)</span></a>
+                </li>
+
+                <li class="nav-item" >
+                  <a class="nav-link" style="color: aliceblue;" href="/accounts/login/">Login</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" style="color: aliceblue;" href="/accounts/register/">Register</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" style="color: aliceblue;" href="/accounts/logout/">Logout</a>
+                </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" style="color: aliceblue;" href="{% url 'urlgen' %}">Url Genrator</a>
+                    </li>
+
+              </ul>
+            </nav>
+
+
+
+
         <section id="section-a" class="grid">
           <div class="content-wrap">
             <h2 class="content-title">Cape Vision</h2>
             <div class="content-text">
               <p>
-                We started in 2012 by opening a school for children from low-income communities in Mumbai. 
-                Our experience in running the school led us to understand the value that high quality teaching 
-                brings to a child's learning in school. The urgency for having more confident and empowered educators across 
+                We started in 2012 by opening a school for children from low-income communities in Mumbai.
+                Our experience in running the school led us to understand the value that high quality teaching
+                brings to a child's learning in school. The urgency for having more confident and empowered educators across
                 schools led us to build customized programs for our teachers.
               </p>
             </div>
@@ -75,7 +111,7 @@
                       Karnataka
                       <br>
                       maharashtra
-                  
+
                   </p>
                 </div>
               </div>
@@ -125,7 +161,7 @@
           <div class="box">
             <h2 class="content-title">About Cape</h2>
             <p>
-              To ensure students continue to learn even when they can't come to school, 
+              To ensure students continue to learn even when they can't come to school,
               teachers need effective resources that can be accessed even with basic devices and data constraints.
           </p>
           <br>
@@ -137,7 +173,7 @@
           </div>
         </section>
       </main>
-    
+
       <footer id="main-footer" class="grid">
         <div>Cape- 321 Foundation</div>
         <div>
@@ -159,25 +195,25 @@ body {
     line-height: 1.5;
     text-align: center;
   }
-  
+
   img {
     display: block;
     width: 100%;
     height: auto;
   }
-  
+
   h1,
   h2,
   h3 {
     margin: 0;
     padding: 1em 0;
   }
-  
+
   p {
     margin: 0;
     padding: 1em 0;
   }
-  
+
   .btn {
     display: inline-block;
     background: #333;
@@ -187,20 +223,20 @@ body {
     border: 1px solid #666;
     margin: 0.5em 0;
   }
-  
+
   .btn:hover {
     background: #eaeaea;
     color: #333;
   }
-  
+
   /* Header Showcase */
-  
+
   #showcase {
     min-height: 450px;
     color: #fff;
     text-align: center;
   }
-  
+
   #showcase .bg-image {
     position: absolute;
     background: #333
@@ -213,75 +249,75 @@ body {
     z-index: -1;
     opacity: 0.4;
   }
-  
+
   #showcase h1 {
     padding-top: 100px;
     padding-bottom: 0;
   }
-  
+
   #showcase .content-wrap,
   #section-a .content-wrap {
     padding: 0 1.5em;
   }
-  
+
   /* Section A */
-  
+
   #section-a {
     background: #eaeaea;
     color: #333;
     padding-bottom: 2em;
   }
-  
+
   /* Section B */
-  
+
   #section-b {
     padding: 2em 1em 1em;
   }
-  
+
   #section-b ul {
     list-style: none;
     margin: 0;
     padding: 0;
   }
-  
+
   #section-b li {
     margin-bottom: 1em;
     background: #fff;
     color: #333;
   }
-  
+
   .card-content {
     padding: 1.5em;
   }
-  
+
   /* Section C */
-  
+
   #section-c {
     background: #fff;
     color: #333;
     padding: 2em;
   }
-  
+
   /* Section D / Boxes */
-  
+
   #section-d .box {
     padding: 2em;
     color: #fff;
   }
-  
+
   #section-d .box:first-child {
     background: #2690d4;
   }
-  
+
   /* Footer */
-  
+
   #main-footer {
     padding: 2em;
     background: #000;
     color: #fff;
     text-align: center;
   }
-  
+
   #main-footer a {
     color: #2690d4;
     text-decoration: none;
@@ -291,48 +327,45 @@ body {
   margin: 0;
   padding: 0;
 }
-  
+
   /* Media Queries */
-  
+
   @media (min-width: 700px) {
     .grid {
       display: grid;
       grid-template-columns: 1fr repeat(2, minmax(auto, 25em)) 1fr;
     }
-  
+
     #section-a .content-text {
       columns: 2;
       column-gap: 2em;
     }
-  
+
     #section-a .content-text p {
       padding-top: 0;
     }
-  
+
     .content-wrap,
     #section-b ul {
       grid-column: 2/4;
     }
-  
+
     .box,
     #main-footer div {
       grid-column: span 2;
     }
-  
+
     #section-b ul {
       display: flex;
       justify-content: space-around;
     }
-  
+
     #section-b li {
       width: 31%;
     }
   }
-  
+
       </style>
     </body>
 
 </html>
-
-
-

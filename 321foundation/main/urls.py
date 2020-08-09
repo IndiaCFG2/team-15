@@ -22,7 +22,7 @@ from .views import home_view,req_view
 
 urlpatterns = [
 
-    path('home/', home_view),
+    path('', home_view,name="home"),
        path('req/', req_view),
   
   

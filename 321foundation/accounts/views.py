@@ -33,9 +33,9 @@ def loginview(request):
 		   adminuser=AdminUser.objects.get(adminname=request.POST['username'],password = request.POST['password'])
 		   if adminuser is not None:
 		   	   request.session['adminname']=request.POST['username']
-		   	   return redirect('../../admins/adminhome')  
+		   	   return redirect('../../admins/adminhome')
 		   else:
-			   return redirect('../../main/home')#render(request,'registration/login.html',{'form' : AuthenticationForm(),'error':'Invalid username or password'})
+			   return redirect('../../')#render(request,'registration/login.html',{'form' : AuthenticationForm(),'error':'Invalid username or password'})
 		if( who == 'user'):
 		   user=authenticate(request,username = request.POST['username'],password = request.POST['password'])
 		   if user is None:
@@ -43,14 +43,12 @@ def loginview(request):
 		   else:
 			   login(request,user)
 			   messages.success(request, f"New account created")
-			   return redirect('../../main/home')
+			   return redirect('../../')
 	else:
-	    return render(request,"registration/login.html",{'form' : AuthenticationForm()})   
-	
+	    return render(request,"registration/login.html",{'form' : AuthenticationForm()})
+
 
 def logoutview(request):
     logout(request)
     messages.info(request, "Logged out successfully!")
-    return redirect("../../main/home/")
-
-
+    return redirect("../../")

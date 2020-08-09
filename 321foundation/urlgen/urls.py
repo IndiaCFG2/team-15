@@ -13,6 +13,6 @@ urlpatterns = [
     path('chartJSON', line_chart_json, name='line_chart_json'),
     path('rangechart',views.rangechart,name='rangechart'),
     path('rangechartdata',views.rangechartdata,name='rangechartdata'),
-    path('dburls',views.dburls,name="dburls")
-    
+    path('dburls/',views.dburls,name="dburls")
+
 ]
