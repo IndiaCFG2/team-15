@@ -11,40 +11,67 @@ from chartjs.views.lines import BaseLineChartView
 mockdata = {
   "users": [
     {
-      "lesson": "loyola",
+      "lesson": "jumping jacks",
       "url": "https://www.webforefront.com/django/namedjangourls.html",
       "modified":"to be generated"
     },
     {
-      "lesson": "snhhs",
+      "lesson": "Algebra",
       "url": "https://www.webforefront.com",
       "modified":"to be generated"
     },
         {
-      "lesson": "sfrdd",
+      "lesson": "probability",
       "url": "https://www.webforddeefront.com",
       "modified":"to be generated"
     },
-    
+            {
+          "lesson": "probability3244",
+          "url": "https://www.webforddeefro2nt.com",
+          "modified":"to be generated"
+        },
+
   ]
 }
 
 
 class LineChartJSONView(BaseLineChartView):
+
     def get_labels(self):
         """Return 7 labels for the x-axis."""
-        return ["January", "February", "March", "April", "May", "June", "July"]
+        '''  startdate = request.session['sd']
+        enddate = request.session['ed']
+        sty=int(startdate[0:4])
+        std=int(startdate[5:7])
+        stm=int(startdate[8:])
+        ety=int(enddate[0:4])
+        etd=int(enddate[5:7])
+        etm=int(enddate[8:])
+
+        startdate = datetime.date(sty,std,stm)
+        enddate = datetime.date(ety,etd,etm)'''
+
+
+        return ["05-08-2020", "06-08-2020", "07-08-2020", "0-08-2020", "07-08-2020"]
+
 
     def get_providers(self):
         """Return names of datasets."""
+        #a = UrlData.objects.all()
+        '''firstnames = UrlData.objects.values_list('school', flat=True)
+        firstnames = list(firstnames)
+        return firstnames'''
+        #temp = [i.school for i in objectList.objects.all()]
+        #return temp
         return ["LittleFlower", "DPS", "Westside"]
 
     def get_data(self):
         """Return 3 datasets to plot."""
 
-        return [[75, 44, 92, 11, 44, 95, 35],
+        return  [[75, 44, 92, 11, 44, 95, 35],
                 [41, 92, 18, 3, 73, 87, 92],
                 [87, 21, 94, 3, 90, 13, 65]]
+
 
 
 line_chart = TemplateView.as_view(template_name='chart.html')
@@ -98,7 +125,7 @@ def result(request):
 
     return render(request,'urlresult.html',context={"result":modified})
 
-def rangechart(request):    
+def rangechart(request):
     return render(request,'rangechart.html')
 
 def rangechartdata(request):
@@ -144,17 +171,11 @@ def dburls(request):
 
         if not checkobj:
             obj = UrlData(school=username,lesson=lesson,urlgenerated=data[i]['modified'],dateofhits=today)
-            obj.save() 
+            obj.save()
     context ={
         'data':data
-    } 
-    
+    }
+
 
 
     return render(request,'urlgenfromdb.html',context=context)
-
-
-
-
-
-

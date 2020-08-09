@@ -6,9 +6,9 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth import logout,login,authenticate
 from django.contrib.auth.models import User
 from django.contrib import messages
-#from admins import templates 
+#from admins import templates
 #from blog import templates
 
 def adminhome_view(request):
-	return render(request,"admins/adminshome.html",{})
+	return render(request,"chart.html",{})
 # Create your views here.
