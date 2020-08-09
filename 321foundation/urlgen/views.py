@@ -6,6 +6,7 @@ from datetime import date
 import datetime
 from django.views.generic import TemplateView
 from chartjs.views.lines import BaseLineChartView
+from .sms import send_message
 
 
 mockdata = {
@@ -94,6 +95,10 @@ def sharepoint(request,st,lesson):
     # hit counter logic
     obj.save()
     st = st.replace('`','/')
+
+    send_message(st)
+
+
     return render(request,'urlsharepoint.html',context={"result":st,"lesson":lesson})
 
 

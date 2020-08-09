@@ -30,13 +30,16 @@
                     <form action='' method="POST">{% csrf_token %}
 		{{ form.as_p }}
 		<label for="cars">Login as:</label>
-<select id="who" name="who">
+<select id="who" name="who" class="browser-default custom-select">
   <option value="user">User</option>
   <option value="admin">Admin</option>
 </select>
 <br/>
-		<button type="">Login</button>
-
+    <div class="btn justify-content-center login_btn bg-primary">
+        <button type="">Login</button>
+    </div>
+		
+		
 	</form>
 
                 </div>
